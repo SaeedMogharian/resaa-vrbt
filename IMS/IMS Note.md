@@ -4,16 +4,13 @@ https://www.ng-voice.com/learning-center/what-is-an-ip-multimedia-subsystem-ims
 The IMS (IP Multimedia Subsystem) structure is organized into three main layers, each serving distinct functions within the architecture:
 
 1. **Application Layer**:
-    
     - This layer is responsible for hosting the applications that provide multimedia services to users. It includes various service applications that can be accessed by end-users, such as voice over IP (VoIP), video conferencing, and messaging services.
 2. **Control Layer**:
-    
     - The Control Layer manages the signaling and control functions necessary for establishing and managing multimedia sessions. It includes components like the Session Initiation Protocol (SIP) servers, which handle call setup, modification, and teardown. Key elements in this layer include:
         - **P-CSCF (Proxy-Call Session Control Function)**: Acts as the entry point for SIP signaling.
         - **S-CSCF (Serving-Call Session Control Function)**: Responsible for session control and service logic.
         - **I-CSCF (Interrogating-Call Session Control Function)**: Handles requests from other networks and routes them appropriately.
 3. **Transport Layer**:
-    
     - This layer is responsible for the transport of media and signaling data across the network. It ensures that the data packets are delivered efficiently and reliably. It includes various transport protocols and interfaces that facilitate communication between different network elements.
 
 The IMS architecture is designed to be flexible and extensible, allowing for the integration of new services and technologies as they emerge. It also emphasizes interoperability with other providers, enabling a seamless user experience across different networks , .
