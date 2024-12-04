@@ -1,19 +1,33 @@
 version: '3.8'
 
 services:
-  # rtpengine:
-  #    image: docker.resaa.net/rtpengine:fonoster-based-1
-  #    container_name: rmgw
-  #    command: rtpengine -L 200 --num-threads=16 --interface=192.168.21.45 --listen-ng=0.0.0.0:2223 --listen-cli=localhost:2224 --measure-rtp --port-min=30000 --port-max=40000 --log-level=3
-  #    network_mode: host
-  #    volumes:
-  #      - /lib/modules:/lib/modules
+  rtpengine:
+     image: docker.resaa.net/rtpengine:fonoster-based-1
+     container_name: rmgw
+     command: rtpengine -L 200 --num-threads=16 --interface=192.168.21.45 --listen-ng=0.0.0.0:2223 --listen-cli=localhost:2224 --measure-rtp --port-min=30000 --port-max=40000 --log-level=3
+     network_mode: host
+     volumes:
+       - /lib/modules:/lib/modules
+
+  # db:
+  #   image: docker.resaa.net/library/mysql:8.0
+  #   container_name: my_sql
+  #   restart: always
+  #   environment:
+  #     - MYSQL_ROOT_PASSWORD=passwd
+  #   ports:
+  #     - '3306:3306'
+  #   volumes:
+  #     - ./mysql:/var/lib/mysql
+      # - ./init-scripts:/docker-entrypoint-initdb.d
 
 
   pcscf:
     image: docker.resaa.net/ghcr.io/kamailio/kamailio:5.8.2-bookworm
     container_name: pcscf
     network_mode: host
+    # depends_on:
+    #   - db
     cap_add:
       - NET_RAW
     volumes:
