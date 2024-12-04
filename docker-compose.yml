@@ -32,3 +32,4 @@ services:
       - NET_RAW
     volumes:
       - ./:/etc/kamailio
+      - ./media:/media
