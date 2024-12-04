@@ -8,6 +8,7 @@ services:
      network_mode: host
      volumes:
        - /lib/modules:/lib/modules
+       - ./media:/media
 
   # db:
   #   image: docker.resaa.net/library/mysql:8.0
@@ -32,4 +33,4 @@ services:
       - NET_RAW
     volumes:
       - ./:/etc/kamailio
-      - ./media:/media
+      # - ./media:/media

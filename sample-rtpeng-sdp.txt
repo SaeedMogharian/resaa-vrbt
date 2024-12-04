@@ -1,0 +1,17 @@
+0_11_0 d3:sdp324:v=0
+o=- 3942318994 3942318994 IN IP4 192.168.20.86
+s=pjmedia
+b=AS:84
+t=0 0
+a=X-nat:0
+m=audio 35504 RTP/AVP 8 0 101
+c=IN IP4 192.168.21.45
+b=TIAS:64000
+a=rtpmap:8 PCMA/8000
+a=rtpmap:0 PCMU/8000
+a=rtpmap:101 telephone-event/8000
+a=fmtp:101 0-16
+a=ssrc:1420259926 cname:66d34fd4550f6517
+a=sendrecv
+a=rtcp:35505
+6:result2:oke
