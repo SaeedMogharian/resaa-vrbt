@@ -40,8 +40,8 @@
   <recv request="UPDATE"  crlf="true" rrs="true">
   </recv>
 
-  <recv response="180" optional="false">
-  </recv>
+  
+
 
   <send retrans="500">
     <![CDATA[
@@ -117,12 +117,11 @@
 
 <pause milliseconds="2000"/>
 -->
-<nop>
+<!-- <nop>
     <action>
-        <!--<exec rtp_stream="pcap/hamid.wav"/>-->
         <exec rtp_stream="pcap/soroosh.pcap"/>
     </action>
-</nop>
+</nop> -->
 
 
 <!-- This delay can be customized by the -d command-line option       -->
