@@ -67,11 +67,11 @@
 
 -->
 
-  <nop>
+  <!-- <nop>
     <action>
       <exec rtp_stream="pcap/server_s.wav"/>
     </action>
-  </nop>
+  </nop> -->
 
 
   <recv request="BYE">
