@@ -1,1 +1,5 @@
 /mysql
+*.webm
+*.pcap
+*.h264
+*.wav

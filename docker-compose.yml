@@ -31,6 +31,9 @@ services:
     #   - db
     cap_add:
       - NET_RAW
+    environment:
+      LISTENING_IP: 192.168.21.45
+      LISTENING_PORT: 5060
     volumes:
       - ./:/etc/kamailio
       # - ./media:/media
