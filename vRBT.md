@@ -144,7 +144,7 @@ loadmodule "db_mysql.so"
 ...
 modparam("siptrace", "db_url", "mysql://root:passwd@127.0.0.1:3306/rvrbt")
 ```
-
+SipTrace Example: https://github.com/sipcapture/homer/wiki/Examples%3A-Kamailio
 ### RTPEngine
 
 #### RTPEngine video support
