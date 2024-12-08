@@ -4,7 +4,7 @@ services:
   rtpengine:
      image: docker.resaa.net/rtpengine:fonoster-based-1
      container_name: rmgw
-     command: rtpengine -L 200 --num-threads=16 --interface=192.168.21.45 --listen-ng=0.0.0.0:2223 --listen-cli=localhost:2224 --measure-rtp --port-min=30000 --port-max=40000 --log-level=3
+     command: rtpengine -L 200 --num-threads=16 --interface=172.16.100.76 --listen-ng=0.0.0.0:2223 --listen-cli=localhost:2224 --measure-rtp --port-min=30000 --port-max=40000 --log-level=3
      network_mode: host
      volumes:
        - /lib/modules:/lib/modules
@@ -32,7 +32,7 @@ services:
     cap_add:
       - NET_RAW
     environment:
-      LISTENING_IP: 192.168.21.45
+      LISTENING_IP: 172.16.100.76
       LISTENING_PORT: 5060
     volumes:
       - ./:/etc/kamailio
