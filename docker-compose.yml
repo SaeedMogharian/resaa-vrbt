@@ -37,3 +37,9 @@ services:
     volumes:
       - ./:/etc/kamailio
       # - ./media:/media
+  
+  redis:
+    image: docker.resaa.net/redis
+    container_name: redis
+    ports:
+      - 6379:6379
