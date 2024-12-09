@@ -22,13 +22,20 @@ services:
   #     - ./mysql:/var/lib/mysql
       # - ./init-scripts:/docker-entrypoint-initdb.d
 
+  redis:
+    image: docker.resaa.net/redis
+    container_name: redis
+    ports:
+      - 6379:6379
+
 
   pcscf:
     image: docker.resaa.net/ghcr.io/kamailio/kamailio:5.8.2-bookworm
     container_name: pcscf
     network_mode: host
-    # depends_on:
-    #   - db
+    depends_on:
+      # - db
+      - redis
     cap_add:
       - NET_RAW
     environment:
@@ -38,8 +45,4 @@ services:
       - ./:/etc/kamailio
       # - ./media:/media
   
-  redis:
-    image: docker.resaa.net/redis
-    container_name: redis
-    ports:
-      - 6379:6379
+  
