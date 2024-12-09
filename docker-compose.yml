@@ -33,7 +33,7 @@ services:
       - NET_RAW
     environment:
       LISTENING_IP: 172.16.100.76
-      LISTENING_PORT: 7000
+      LISTENING_PORT: 5060
     volumes:
       - ./:/etc/kamailio
       # - ./media:/media
