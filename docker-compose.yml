@@ -32,7 +32,9 @@ services:
   pcscf:
     # image: docker.resaa.net/ghcr.io/kamailio/kamailio:5.8.2-bookworm
     # image: kamailio-master:latest
-    image: ghcr.io/kamailio/kamailio-ci
+    # image: kamailio-master:latest
+    image: ghcr.io/kamailio/kamailio-master-devcontainer:latest
+    # image: ghcr.io/kamailio/kamailio-ci:master
     container_name: pcscf
     network_mode: host
     depends_on:
