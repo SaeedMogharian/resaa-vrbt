@@ -43,8 +43,9 @@
 	    <action application="log" data="############# channel_name: ${channel_name}"/>
 	    <!-- <action application="answer"/> -->
 	    <!-- <action application="sleep" data="1500"/> -->
-	    <action application="playback" data="$${hold_music}"/>
-	    <!-- <action application="endless_playback" data="$${hold_video}"/> -->
+	    <!-- <action application="playback" data="$${hold_music}"/> -->
+	    <action application="endless_playback" data="$${hold_video}"/>
+	    <action application="playback" data="$${hold_video}"/>
 
 	    <action application="hangup" data="" />
       </condition>
