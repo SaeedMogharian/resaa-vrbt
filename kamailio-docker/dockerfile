@@ -22,13 +22,11 @@ RUN apt update && apt -y install mysql-server tcpdump screen ntp ntpdate git-cor
         libsctp-dev libradcli-dev libradcli4 libjson-c-dev pkg-config iproute2 net-tools \
         iputils-ping libgcrypt20-dev libjansson-dev libevent-dev libnghttp2-dev uuid-dev 
 
-
- 
 COPY ./kamailio /usr/local/src/kamailio-5.8/kamailio/
 
 WORKDIR /usr/local/src/kamailio-5.8/kamailio
 
-# RUN make include_modules="ndb_redis" cfg
+RUN make exclude_modules="" cfg
 
 RUN export RADCLI=1 && make Q=0 all | tee make_all.txt && make install | tee make_install.txt && ldconfig
 
