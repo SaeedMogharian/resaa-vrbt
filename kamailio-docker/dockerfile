@@ -26,9 +26,9 @@ COPY ./kamailio /usr/local/src/kamailio-5.8/kamailio/
 
 WORKDIR /usr/local/src/kamailio-5.8/kamailio
 
-RUN make include_modules="ndb_redis" cfg
+# RUN make include_modules="ndb_redis" cfg
 
-RUN export RADCLI=1 && make Q=0 all | tee make_all.txt && make install | tee make_install.txt && ldconfig
+RUN export RADCLI=1 && make Q=0 include_modules="ndb_redis" all | tee make_all.txt && make install | tee make_install.txt && ldconfig
 
 RUN rm -rf /usr/share/doc /usr/share/man /usr/share/info /usr/local/src/kamailio-5.8 \
         /var/lib/apt/lists/* && echo "root:a" | chpasswd && apt remove -y git-core\
